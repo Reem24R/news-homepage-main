@@ -1,0 +1,23 @@
+@use 'vars' as vars;
+@use './media' as me;
+*
+{
+    font-family: vars.$font;
+}
+body
+{
+    min-height:150vh;
+    min-width: 300px;
+}
+.countainer
+{
+    margin:  0px 70px;
+    // background-color: black;
+    @include me.md()
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    // background-color: cadetblue;
+}
+}

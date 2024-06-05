@@ -1,0 +1,56 @@
+@use './scss/mixs&funs' as fx;
+@use './scss/media' as me;
+.header
+{
+    position: absolute;
+   display: flex;
+   align-items: start;
+   justify-content: space-between;
+    // background-color: aqua;
+    .nav-bar 
+    {
+        width: 50%;
+        // background-color: cadetblue;
+        & ul{
+        @include fx.flex_box();
+        }
+        & ul li{
+            list-style: none;
+            padding: 10px;
+            transition: .2s ease-in;
+            &:hover
+            {
+                color:var(--Soft-red);
+                cursor: pointer;
+            }
+        }
+    }
+    .close img
+    {
+        display: none;
+        width: 35px;
+        height: 20px;
+    }
+    .sidebar
+    {
+        width: 50%;
+        height: 400px;
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        border: 2px solid black;
+        display: none;
+    }
+    @include me.md()
+    {
+        width: 100%;
+        .nav-bar
+        {
+            display: none;
+        }
+        .close img
+        {
+            display: block;
+        }
+    }
+}

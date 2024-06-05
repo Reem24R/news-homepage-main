@@ -1,0 +1,94 @@
+@use './scss/mixs&funs' as fx;
+@use './colors' as colors;
+@use './media' as me;
+.section3
+{
+    @include fx.flex_box();
+    .card
+    {
+        // background-color: aquamarine;
+        width: 30%;
+        height: 200px;
+        display: flex;
+        img 
+        {
+            margin-right: 5px;
+            width: 50;
+            height: 100%;
+        }
+        h1 
+        {
+            // background-color: aqua;
+            color: var(--Dark-grayish-blue);
+        }
+       .des
+        {
+            height: 100%;
+            width: 500px;
+            @include fx.flex_box();
+            flex-direction: column;
+            align-items: start;
+            // background-color: brown;
+            .title
+            {
+                font-weight: bold;
+                font-size:20px;
+                transition: .3s ease-in;
+                &:hover
+                {
+                    color: var(--Soft-red);
+                    cursor: pointer;
+                }
+            }
+            .text
+            {
+                color: var(--Dark-grayish-blue);
+            }
+        }
+    }
+    @include me.md()
+    {
+        @include fx.grid_box();
+        .card
+        {
+            height: auto;
+
+            // background-color: rgb(161, 127, 255);
+            @include fx.flex_col();
+            height: 150px;
+            margin: 10px;
+            width: 300px;
+            img 
+            {
+                margin: 5px;
+            }
+           .title 
+           {
+            font-size: 15px;
+            transition: .3s ease-in;
+            &:hover
+            {
+                color: var(--Soft-red);
+                cursor: pointer;
+            }
+           } 
+           h1 
+           {
+            margin: 0;
+            padding: 0;
+           }
+           .text 
+           {
+            font-size: 13px;
+           }
+           .des
+           {
+            width: map-get(me.$breakpoints, "xs" );
+            margin: 0;
+            padding: 0;
+            // background-color: blue;
+            width: 250px;
+           }
+        }
+    }
+}

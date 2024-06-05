@@ -1,0 +1,25 @@
+@mixin flex_box()
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex_box_aligen_start()
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+@mixin grid_box()
+{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex_col()
+{
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    flex-direction: col;
+}
