@@ -1,5 +1,6 @@
 function show()
 {
+    const header=document.querySelector(".header");
     const menu=document.querySelector(".close");
     const sidebar=document.querySelector(".sidebar");
     const container=document.querySelector(".countainer");
@@ -7,8 +8,9 @@ function show()
         {
             menu.style.display="none";
             sidebar.style.display="block";
-            container.style.opacity = "0.2";
-            sidebar.style.opacity="1";
+            header.style.position="relative";
+            // container.style.opacity = "0.2";
+            // sidebar.style.opacity="1";
         }else
         {
             menu.style.display="block";
@@ -23,8 +25,8 @@ function hide()
         {
             sidebar.style.display="none";
             menu.style.display="block";
-            container.style.opacity = "1";
-
+            // container.style.opacity = "1";
+            header.style.position = "static";
 
         }else
         {
